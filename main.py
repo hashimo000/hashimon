@@ -25,3 +25,6 @@ df = pd.DataFrame(
     columns=["lat","lon"]
 )
 st.map(df)
+with col1:
+    st.header("A cat")
+    st.image("https://static.streamlit.io/examples/cat.jpg", use_column_width=True)
