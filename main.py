@@ -25,6 +25,7 @@ df = pd.DataFrame(
     columns=["lat","lon"]
 )
 st.map(df)
-image = Image.open('test.png')
-
-st.image(image, caption='サンプル',use_column_width=True)
+import streamlit as st
+from PIL import Image
+import numpy as np
+st.file_uploader("ファイルアップロード", type='jpg')
