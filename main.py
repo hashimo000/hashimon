@@ -29,7 +29,7 @@ import streamlit as st
 from PIL import Image
 import numpy as np
 uploaded_file = st.file_uploader("ファイルアップロード", type='jpg')
-if uploaded_file == True:
+if uploaded_file is not None:
     image=Image.open(uploaded_file)
     img_array = np.array(image)
 else:
