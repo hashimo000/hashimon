@@ -25,6 +25,6 @@ df = pd.DataFrame(
     columns=["lat","lon"]
 )
 st.map(df)
-with col1:
-    st.header("A cat")
-    st.image("https://static.streamlit.io/examples/cat.jpg", use_column_width=True)
+image = Image.open('test.png')
+
+st.image(image, caption='サンプル',use_column_width=True)
