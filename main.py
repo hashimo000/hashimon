@@ -29,8 +29,11 @@ import streamlit as st
 from PIL import Image
 import numpy as np
 uploaded_file = st.file_uploader("ファイルアップロード", type='jpg')
-image=Image.open(uploaded_file)
-img_array = np.array(image)
+if uploaded_file == True:
+    image=Image.open(uploaded_file)
+    img_array = np.array(image)
+else:
+    st.write("ファイルがアップロードされていません")
 button1 = st.button("押してください")
 if button1 == True :
     st.image(img_array,caption = 'サムネイル画像',use_column_width = True)
