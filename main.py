@@ -39,3 +39,8 @@ if button1 == True :
     st.image(img_array,caption = 'サムネイル画像',use_column_width = True)
 else:
     st.write("")
+
+st.write('Interactive Widget')
+
+text = st.text_input('あなたの趣味を教えてください。')
+'あなたの趣味', text
