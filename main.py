@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-
+import time
 st.title("sorcetree")
 st.write("こんにちは！")
 """
@@ -48,6 +48,17 @@ text = st.sidebar.text_input('あなたの趣味を教えてください。')
 condition = st.sidebar.slider('あなたの今の調子は？',0,10,5)
 'コンディション:',condition
 
+ 
+st.write('プログレスバーの表示')
+'Start!!'
+latest_iteration = st.empty()
+bar = st.progress(0)
+for i in range(100):
+    latest_iteration.text(f'Interation {i+1}')
+    bar.progress(i + 1)
+    time.sleep(0.1)
+'Done!!'
+
 left_column, right_column = st.columns(2)
 button = left_column.button('右カラムに文字を表示')
 if button:
@@ -61,13 +72,4 @@ expander3=st.expander('問い合わせ３')
 expander3.write('問い合わせ３の回答')
 expander4=st.expander('問い合わせ４')
 expander4.write('問い合わせ４の回答')
-import time 
-st.write('プログレスバーの表示')
-'Start!!'
-latest_iteration = st.empty()
-bar = st.progress(0)
-for i in range(100):
-    latest_iteration.text(f'Interation {i+1}')
-    bar.progress(i + 1)
-    time.sleep(0.1)
-'Done!!'
+
