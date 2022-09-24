@@ -63,3 +63,14 @@ expander3.write('問い合わせ３の回答')
 expander4=st.expander('問い合わせ４')
 expander4.write('問い合わせ４の回答')
 
+import time
+
+st.write('プログレスバーの表示')
+'Start!!'
+latest_iteration = st.empty()
+bar = st.progress(0)
+for i in range(100):
+    latest_iteration.text(f'Interation {i+1}')
+    bar.progress(i + 1)
+    time.sleep(0.1)
+'Done!!'
