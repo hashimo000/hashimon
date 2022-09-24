@@ -1,7 +1,6 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-import time
 st.title("sorcetree")
 st.write("こんにちは！")
 """
@@ -49,15 +48,6 @@ condition = st.sidebar.slider('あなたの今の調子は？',0,10,5)
 'コンディション:',condition
 
  
-st.write('プログレスバーの表示')
-'Start!!'
-latest_iteration = st.empty()
-bar = st.progress(0)
-for i in range(100):
-    latest_iteration.text(f'Interation {i+1}')
-    bar.progress(i + 1)
-    time.sleep(0.1)
-'Done!!'
 
 left_column, right_column = st.columns(2)
 button = left_column.button('右カラムに文字を表示')
