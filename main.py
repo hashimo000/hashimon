@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
+import PIL import Image
 import time
 st.title("sorcetree")
 st.write("こんにちは！")
@@ -69,5 +70,4 @@ bar = st.progress(0)
 for i in range(100):
     latest_iteration.text(f'Interation {i+1}')
     bar.progress(i + 1)
-    
-    'Done!!'
+'Done!!'
