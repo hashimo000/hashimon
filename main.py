@@ -42,7 +42,7 @@ else:
 
 st.write('Interactive Widget')
 
-text = st.text_input('あなたの趣味を教えてください。')
+text = st.sidebar.text_input('あなたの趣味を教えてください。')
 'あなたの趣味：', text
-condition = st.slider('あなたの今の調子は？',0,10,5)
+condition = st.sidebar.slider('あなたの今の調子は？',0,10,5)
 'コンディション:',condition
