@@ -47,7 +47,7 @@ text = st.sidebar.text_input('あなたの趣味を教えてください。')
 condition = st.sidebar.slider('あなたの今の調子は？',0,10,5)
 'コンディション:',condition
 
-left_colum, right_column = st.beta_columns(2)
+left_column, right_column = st.beta_columns(2)
 button = left_column.button('右カラムに文字を表示')
 if button:
     right_column.write('ここは右コラム')
